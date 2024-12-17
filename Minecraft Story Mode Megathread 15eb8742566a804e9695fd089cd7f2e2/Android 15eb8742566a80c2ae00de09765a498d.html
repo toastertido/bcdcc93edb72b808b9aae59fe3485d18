@@ -1,0 +1,695 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Android</title><style>
+	/* cspell:disable-file */
+	/* webkit printing magic: print all background colors */
+	html {
+		-webkit-print-color-adjust: exact;
+	}
+	* {
+		box-sizing: border-box;
+		-webkit-print-color-adjust: exact;
+	}
+	
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	@media only screen {
+		body {
+			margin: 2em auto;
+			max-width: 900px;
+			color: rgb(55, 53, 47);
+		}
+	}
+	
+	body {
+		line-height: 1.5;
+		white-space: pre-wrap;
+	}
+	
+	a,
+	a.visited {
+		color: inherit;
+		text-decoration: underline;
+	}
+	
+	.pdf-relative-link-path {
+		font-size: 80%;
+		color: #444;
+	}
+	
+	h1,
+	h2,
+	h3 {
+		letter-spacing: -0.01em;
+		line-height: 1.2;
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+	
+	.page-title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin-top: 0;
+		margin-bottom: 0.75em;
+	}
+	
+	h1 {
+		font-size: 1.875rem;
+		margin-top: 1.875rem;
+	}
+	
+	h2 {
+		font-size: 1.5rem;
+		margin-top: 1.5rem;
+	}
+	
+	h3 {
+		font-size: 1.25rem;
+		margin-top: 1.25rem;
+	}
+	
+	.source {
+		border: 1px solid #ddd;
+		border-radius: 3px;
+		padding: 1.5em;
+		word-break: break-all;
+	}
+	
+	.callout {
+		border-radius: 3px;
+		padding: 1rem;
+	}
+	
+	figure {
+		margin: 1.25em 0;
+		page-break-inside: avoid;
+	}
+	
+	figcaption {
+		opacity: 0.5;
+		font-size: 85%;
+		margin-top: 0.5em;
+	}
+	
+	mark {
+		background-color: transparent;
+	}
+	
+	.indented {
+		padding-left: 1.5em;
+	}
+	
+	hr {
+		background: transparent;
+		display: block;
+		width: 100%;
+		height: 1px;
+		visibility: visible;
+		border: none;
+		border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+	}
+	
+	img {
+		max-width: 100%;
+	}
+	
+	@media only print {
+		img {
+			max-height: 100vh;
+			object-fit: contain;
+		}
+	}
+	
+	@page {
+		margin: 1in;
+	}
+	
+	.collection-content {
+		font-size: 0.875rem;
+	}
+	
+	.column-list {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.column {
+		padding: 0 1em;
+	}
+	
+	.column:first-child {
+		padding-left: 0;
+	}
+	
+	.column:last-child {
+		padding-right: 0;
+	}
+	
+	.table_of_contents-item {
+		display: block;
+		font-size: 0.875rem;
+		line-height: 1.3;
+		padding: 0.125rem;
+	}
+	
+	.table_of_contents-indent-1 {
+		margin-left: 1.5rem;
+	}
+	
+	.table_of_contents-indent-2 {
+		margin-left: 3rem;
+	}
+	
+	.table_of_contents-indent-3 {
+		margin-left: 4.5rem;
+	}
+	
+	.table_of_contents-link {
+		text-decoration: none;
+		opacity: 0.7;
+		border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+	}
+	
+	table,
+	th,
+	td {
+		border: 1px solid rgba(55, 53, 47, 0.09);
+		border-collapse: collapse;
+	}
+	
+	table {
+		border-left: none;
+		border-right: none;
+	}
+	
+	th,
+	td {
+		font-weight: normal;
+		padding: 0.25em 0.5em;
+		line-height: 1.5;
+		min-height: 1.5em;
+		text-align: left;
+	}
+	
+	th {
+		color: rgba(55, 53, 47, 0.6);
+	}
+	
+	ol,
+	ul {
+		margin: 0;
+		margin-block-start: 0.6em;
+		margin-block-end: 0.6em;
+	}
+	
+	li > ol:first-child,
+	li > ul:first-child {
+		margin-block-start: 0.6em;
+	}
+	
+	ul > li {
+		list-style: disc;
+	}
+	
+	ul.to-do-list {
+		padding-inline-start: 0;
+	}
+	
+	ul.to-do-list > li {
+		list-style: none;
+	}
+	
+	.to-do-children-checked {
+		text-decoration: line-through;
+		opacity: 0.375;
+	}
+	
+	ul.toggle > li {
+		list-style: none;
+	}
+	
+	ul {
+		padding-inline-start: 1.7em;
+	}
+	
+	ul > li {
+		padding-left: 0.1em;
+	}
+	
+	ol {
+		padding-inline-start: 1.6em;
+	}
+	
+	ol > li {
+		padding-left: 0.2em;
+	}
+	
+	.mono ol {
+		padding-inline-start: 2em;
+	}
+	
+	.mono ol > li {
+		text-indent: -0.4em;
+	}
+	
+	.toggle {
+		padding-inline-start: 0em;
+		list-style-type: none;
+	}
+	
+	/* Indent toggle children */
+	.toggle > li > details {
+		padding-left: 1.7em;
+	}
+	
+	.toggle > li > details > summary {
+		margin-left: -1.1em;
+	}
+	
+	.selected-value {
+		display: inline-block;
+		padding: 0 0.5em;
+		background: rgba(206, 205, 202, 0.5);
+		border-radius: 3px;
+		margin-right: 0.5em;
+		margin-top: 0.3em;
+		margin-bottom: 0.3em;
+		white-space: nowrap;
+	}
+	
+	.collection-title {
+		display: inline-block;
+		margin-right: 1em;
+	}
+	
+	.page-description {
+		margin-bottom: 2em;
+	}
+	
+	.simple-table {
+		margin-top: 1em;
+		font-size: 0.875rem;
+		empty-cells: show;
+	}
+	.simple-table td {
+		height: 29px;
+		min-width: 120px;
+	}
+	
+	.simple-table th {
+		height: 29px;
+		min-width: 120px;
+	}
+	
+	.simple-table-header-color {
+		background: rgb(247, 246, 243);
+		color: black;
+	}
+	.simple-table-header {
+		font-weight: 500;
+	}
+	
+	time {
+		opacity: 0.5;
+	}
+	
+	.icon {
+		display: inline-block;
+		max-width: 1.2em;
+		max-height: 1.2em;
+		text-decoration: none;
+		vertical-align: text-bottom;
+		margin-right: 0.5em;
+	}
+	
+	img.icon {
+		border-radius: 3px;
+	}
+	
+	.user-icon {
+		width: 1.5em;
+		height: 1.5em;
+		border-radius: 100%;
+		margin-right: 0.5rem;
+	}
+	
+	.user-icon-inner {
+		font-size: 0.8em;
+	}
+	
+	.text-icon {
+		border: 1px solid #000;
+		text-align: center;
+	}
+	
+	.page-cover-image {
+		display: block;
+		object-fit: cover;
+		width: 100%;
+		max-height: 30vh;
+	}
+	
+	.page-header-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+	
+	.page-header-icon-with-cover {
+		margin-top: -0.72em;
+		margin-left: 0.07em;
+	}
+	
+	.page-header-icon img {
+		border-radius: 3px;
+	}
+	
+	.link-to-page {
+		margin: 1em 0;
+		padding: 0;
+		border: none;
+		font-weight: 500;
+	}
+	
+	p > .user {
+		opacity: 0.5;
+	}
+	
+	td > .user,
+	td > time {
+		white-space: nowrap;
+	}
+	
+	input[type="checkbox"] {
+		transform: scale(1.5);
+		margin-right: 0.6em;
+		vertical-align: middle;
+	}
+	
+	p {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
+	
+	.image {
+		border: none;
+		margin: 1.5em 0;
+		padding: 0;
+		border-radius: 0;
+		text-align: center;
+	}
+	
+	.code,
+	code {
+		background: rgba(135, 131, 120, 0.15);
+		border-radius: 3px;
+		padding: 0.2em 0.4em;
+		border-radius: 3px;
+		font-size: 85%;
+		tab-size: 2;
+	}
+	
+	code {
+		color: #eb5757;
+	}
+	
+	.code {
+		padding: 1.5em 1em;
+	}
+	
+	.code-wrap {
+		white-space: pre-wrap;
+		word-break: break-all;
+	}
+	
+	.code > code {
+		background: none;
+		padding: 0;
+		font-size: 100%;
+		color: inherit;
+	}
+	
+	blockquote {
+		font-size: 1.25em;
+		margin: 1em 0;
+		padding-left: 1em;
+		border-left: 3px solid rgb(55, 53, 47);
+	}
+	
+	.bookmark {
+		text-decoration: none;
+		max-height: 8em;
+		padding: 0;
+		display: flex;
+		width: 100%;
+		align-items: stretch;
+	}
+	
+	.bookmark-title {
+		font-size: 0.85em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		height: 1.75em;
+		white-space: nowrap;
+	}
+	
+	.bookmark-text {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.bookmark-info {
+		flex: 4 1 180px;
+		padding: 12px 14px 14px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	
+	.bookmark-image {
+		width: 33%;
+		flex: 1 1 180px;
+		display: block;
+		position: relative;
+		object-fit: cover;
+		border-radius: 1px;
+	}
+	
+	.bookmark-description {
+		color: rgba(55, 53, 47, 0.6);
+		font-size: 0.75em;
+		overflow: hidden;
+		max-height: 4.5em;
+		word-break: break-word;
+	}
+	
+	.bookmark-href {
+		font-size: 0.75em;
+		margin-top: 0.25em;
+	}
+	
+	.sans { font-family: Wingdings; }
+	.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+	.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+	.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+	.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+	.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+	.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+	.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+	.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+	.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+	.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+	.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+	.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+	.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+	.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+	.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+	.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+	.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+	.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+	.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+	.highlight-default {
+		color: rgba(55, 53, 47, 1);
+	}
+	.highlight-gray {
+		color: rgba(120, 119, 116, 1);
+		fill: rgba(120, 119, 116, 1);
+	}
+	.highlight-brown {
+		color: rgba(159, 107, 83, 1);
+		fill: rgba(159, 107, 83, 1);
+	}
+	.highlight-orange {
+		color: rgba(217, 115, 13, 1);
+		fill: rgba(217, 115, 13, 1);
+	}
+	.highlight-yellow {
+		color: rgba(203, 145, 47, 1);
+		fill: rgba(203, 145, 47, 1);
+	}
+	.highlight-teal {
+		color: rgba(68, 131, 97, 1);
+		fill: rgba(68, 131, 97, 1);
+	}
+	.highlight-blue {
+		color: rgba(51, 126, 169, 1);
+		fill: rgba(51, 126, 169, 1);
+	}
+	.highlight-purple {
+		color: rgba(144, 101, 176, 1);
+		fill: rgba(144, 101, 176, 1);
+	}
+	.highlight-pink {
+		color: rgba(193, 76, 138, 1);
+		fill: rgba(193, 76, 138, 1);
+	}
+	.highlight-red {
+		color: rgba(212, 76, 71, 1);
+		fill: rgba(212, 76, 71, 1);
+	}
+	.highlight-default_background {
+		color: rgba(55, 53, 47, 1);
+	}
+	.highlight-gray_background {
+		background: rgba(241, 241, 239, 1);
+	}
+	.highlight-brown_background {
+		background: rgba(244, 238, 238, 1);
+	}
+	.highlight-orange_background {
+		background: rgba(251, 236, 221, 1);
+	}
+	.highlight-yellow_background {
+		background: rgba(251, 243, 219, 1);
+	}
+	.highlight-teal_background {
+		background: rgba(237, 243, 236, 1);
+	}
+	.highlight-blue_background {
+		background: rgba(231, 243, 248, 1);
+	}
+	.highlight-purple_background {
+		background: rgba(244, 240, 247, 0.8);
+	}
+	.highlight-pink_background {
+		background: rgba(249, 238, 243, 0.8);
+	}
+	.highlight-red_background {
+		background: rgba(253, 235, 236, 1);
+	}
+	.block-color-default {
+		color: inherit;
+		fill: inherit;
+	}
+	.block-color-gray {
+		color: rgba(120, 119, 116, 1);
+		fill: rgba(120, 119, 116, 1);
+	}
+	.block-color-brown {
+		color: rgba(159, 107, 83, 1);
+		fill: rgba(159, 107, 83, 1);
+	}
+	.block-color-orange {
+		color: rgba(217, 115, 13, 1);
+		fill: rgba(217, 115, 13, 1);
+	}
+	.block-color-yellow {
+		color: rgba(203, 145, 47, 1);
+		fill: rgba(203, 145, 47, 1);
+	}
+	.block-color-teal {
+		color: rgba(68, 131, 97, 1);
+		fill: rgba(68, 131, 97, 1);
+	}
+	.block-color-blue {
+		color: rgba(51, 126, 169, 1);
+		fill: rgba(51, 126, 169, 1);
+	}
+	.block-color-purple {
+		color: rgba(144, 101, 176, 1);
+		fill: rgba(144, 101, 176, 1);
+	}
+	.block-color-pink {
+		color: rgba(193, 76, 138, 1);
+		fill: rgba(193, 76, 138, 1);
+	}
+	.block-color-red {
+		color: rgba(212, 76, 71, 1);
+		fill: rgba(212, 76, 71, 1);
+	}
+	.block-color-default_background {
+		color: inherit;
+		fill: inherit;
+	}
+	.block-color-gray_background {
+		background: rgba(241, 241, 239, 1);
+	}
+	.block-color-brown_background {
+		background: rgba(244, 238, 238, 1);
+	}
+	.block-color-orange_background {
+		background: rgba(251, 236, 221, 1);
+	}
+	.block-color-yellow_background {
+		background: rgba(251, 243, 219, 1);
+	}
+	.block-color-teal_background {
+		background: rgba(237, 243, 236, 1);
+	}
+	.block-color-blue_background {
+		background: rgba(231, 243, 248, 1);
+	}
+	.block-color-purple_background {
+		background: rgba(244, 240, 247, 0.8);
+	}
+	.block-color-pink_background {
+		background: rgba(249, 238, 243, 0.8);
+	}
+	.block-color-red_background {
+		background: rgba(253, 235, 236, 1);
+	}
+	.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+	.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+	.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+	.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+	.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+	.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+	.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+	.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+	.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+	.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+	.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+	.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+	.select-value-color-pageGlass { background-color: undefined; }
+	.select-value-color-washGlass { background-color: undefined; }
+	
+	.checkbox {
+		display: inline-flex;
+		vertical-align: text-bottom;
+		width: 16;
+		height: 16;
+		background-size: 16px;
+		margin-left: 2px;
+		margin-right: 5px;
+	}
+	
+	.checkbox-on {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+	}
+	
+	.checkbox-off {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+	}
+		
+	</style></head><body style="background-color: #121212; color: white;"><article id="15eb8742-566a-804e-9695-fd089cd7f2e2" class="page sans"><header><img class="page-cover-image" src="Android%2015eb8742566a80c2ae00de09765a498d/SCR-20241216-rypm.png" style="object-position:center 31.66%"><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://i.imgur.com/cRGETR8.png"></div><h1 class="page-title">Android</h1><p class="page-description"></p></header><div class="page-body"><p id="15eb8742-566a-8048-9602-f02122cc5774" class=""><strong>There is no way to get the Android version legitimately, such as from the Google Play Store. Please do not ask how to get it legitimately. You can still download the game from Google Play if you bought it before it got taken down by going to your purchase/download history. Episodes can't be downloaded this way. If in doubt, the Cache is the required game files and Episode 1 of both seasons.</strong></p><h2 id="15eb8742-566a-808d-a83a-cf674b1f9ec9" class=""><strong>Download from PDALife<br><br></strong><mark class="highlight-blue"><strong><a href="https://pdalife.com/minecraft-story-mod-android-a16884.html">Season One Download<br><br></a></strong></mark><mark class="highlight-blue"><strong><a href="https://pdalife.com/minecraft-story-mode-season-two-android-a28736.html">Season Two Download<br><br></a></strong></mark><mark class="highlight-blue"><strong><a href="https://www.mediafire.com/file/vt6wfxzp65v2adp/Telltale.zip/file">Telltale Folder Download</a></strong></mark></h2><p id="15eb8742-566a-802b-b53d-e24b8249dbe7" class=""><strong>Some newer devices don't run the game well (see bottom of page). If you want to play the game, you'll need to download&nbsp;</strong><strong><a href="https://www.vphoneos.com/mobile/index/">VPhoneOS</a></strong>,&nbsp;<strong>which is an</strong>&nbsp;<strong>Android 7 and 10 virtual machine for Android. After you install the app, the game installation</strong>&nbsp;<strong>process is basically the same as the one on this section so you do not need to worry about anything else! (credits to KrusherDS for discovering this)</strong></p><h1 id="15eb8742-566a-806e-be33-f4bba8d80d34" class=""><strong>No PC</strong></h1><ul id="15eb8742-566a-809f-ac6b-f95c41e58180" class="bulleted-list"><li style="list-style-type:disc">Download Firefox&nbsp;from the Play Store.</li></ul><ul id="15eb8742-566a-804f-be95-cccea0b36a0e" class="bulleted-list"><li style="list-style-type:disc">Go to extensions and install&nbsp;<a href="https://ublockorigin.com/">uBlock Origin</a>.&nbsp;This will help with the ads.</li></ul><ul id="15eb8742-566a-80b1-9b0b-fd995b982af6" class="bulleted-list"><li style="list-style-type:disc">(Season One&nbsp;<strong>exclusive</strong>&nbsp;step, skip if you're getting Season Two) You will see the same version of the game with different color-coded texts on the right side. Those are what's called&nbsp;<strong>GPU architectures</strong>. In order to know which one to get, look up on Google "Which GPU does [your phone model] have?" and look for the GPU of your device. (If you have a Tegra or Xclipse GPU, use the VPhoneOS method below.)</li></ul><ul id="15eb8742-566a-80c9-9b5d-e6f9973a7501" class="bulleted-list"><li style="list-style-type:disc">Download the corresponding files (APK, the cache and the Episodes) from PDALife.</li></ul><ul id="15eb8742-566a-804d-9015-cb1a545233aa" class="bulleted-list"><li style="list-style-type:disc">Extract the ZIP.</li></ul><ul id="15eb8742-566a-802e-83ba-f65c1caf431f" class="bulleted-list"><li style="list-style-type:disc">Install the APK&nbsp;file.</li></ul><ul id="15eb8742-566a-80b2-b286-d19bc7a594ee" class="bulleted-list"><li style="list-style-type:disc">Open the app once. If it asks to view files on your device, deny it. You should see the screen below.</li></ul><figure id="15eb8742-566a-8002-95b5-fc133b94e20f" class="image"><a href="Android%2015eb8742566a80c2ae00de09765a498d/26291d15-eb39-4ae2-9916-700206f74fe6.png"><img style="width:576px" src="Android%2015eb8742566a80c2ae00de09765a498d/26291d15-eb39-4ae2-9916-700206f74fe6.png"></a></figure><ul id="15eb8742-566a-807c-9925-e8e2ec231cd0" class="bulleted-list"><li style="list-style-type:disc">Select all ZIPs that you downloaded and tap on Extract to a folder,&nbsp;it will make a folder and extract there.</li></ul><ul id="15eb8742-566a-8089-b646-f8de2d699cc2" class="bulleted-list"><li style="list-style-type:disc">Copy the&nbsp;.obb files to /Android/obb/com.telltalegames.minecraftXXX/ (100 if Season One, 200 if Season Two).</li></ul><figure id="15eb8742-566a-8098-8b1a-c48a9d59a5ea" class="image"><a href="Android%2015eb8742566a80c2ae00de09765a498d/02e4963a-e760-4d87-bfc5-616ed7939e60.png"><img style="width:576px" src="Android%2015eb8742566a80c2ae00de09765a498d/02e4963a-e760-4d87-bfc5-616ed7939e60.png"></a></figure><ul id="15eb8742-566a-808f-8dbf-fee3fc223303" class="bulleted-list"><li style="list-style-type:disc">Copy the folders in /Android/data/com.telltalegames.minecraftXXX/ (100 if Season One, 200 if Season Two).</li></ul><ul id="15eb8742-566a-8072-a17a-f58f23919506" class="bulleted-list"><li style="list-style-type:disc">You can now open the game, enjoy!</li></ul><h1 id="15eb8742-566a-80b7-8f98-f28d772d9764" class=""><strong>With PC</strong></h1><ul id="15eb8742-566a-80b6-93e6-d4294a7c97bf" class="bulleted-list"><li style="list-style-type:disc">Plug in your device to your computer with your charging cable.</li></ul><ul id="15eb8742-566a-8007-91f3-e8236cfa253d" class="bulleted-list"><li style="list-style-type:disc">(Season One&nbsp;<strong>exclusive</strong>&nbsp;step, skip if you're getting Season Two) You will see the same version of the game with different color-coded texts on the right side. Those are what's called&nbsp;<strong>GPU architectures</strong>. In order to know which one to get, look up on Google "Which GPU does [your phone model] have?" and look for the GPU of your device.</li></ul><ul id="15eb8742-566a-8009-8abe-cfe25861cd0f" class="bulleted-list"><li style="list-style-type:disc">Download the corresponding files (APK, the cache and the Episodes) from PDALife.</li></ul><ul id="15eb8742-566a-802d-b2d8-ebef3227952c" class="bulleted-list"><li style="list-style-type:disc">Extract the ZIP.</li></ul><ul id="15eb8742-566a-80c8-9095-d7afcc341d75" class="bulleted-list"><li style="list-style-type:disc">Enter your PIN/Password on your phone and tap on "Allow" on the popup.</li></ul><ul id="15eb8742-566a-8041-b8ba-e63466158634" class="bulleted-list"><li style="list-style-type:disc">If asked, tap on "File sharing" option.</li></ul><ul id="15eb8742-566a-8092-8228-e3c56c3fcc04" class="bulleted-list"><li style="list-style-type:disc">Drag and drop the APK to your preferred folder on your phone. (ie. Downloads).</li></ul><p id="15eb8742-566a-80cb-8f90-eee7cb3a2e8c" class="">
+	</p><figure id="15eb8742-566a-80b9-bd02-f011cd178381" class="image"><a href="Android%2015eb8742566a80c2ae00de09765a498d/8ad864d92267720f6554ab7e5d672b23.gif"><img style="width:600px" src="Android%2015eb8742566a80c2ae00de09765a498d/8ad864d92267720f6554ab7e5d672b23.gif"></a></figure><ul id="15eb8742-566a-80e2-a846-e6e3cf722d75" class="bulleted-list"><li style="list-style-type:disc">Select all ZIPs that you downloaded and&nbsp;click&nbsp;on Extract to a folder, it will make a folder and extract there.</li></ul><ul id="15eb8742-566a-8049-83b0-c49ce71efcae" class="bulleted-list"><li style="list-style-type:disc">Copy the .obb files to /Android/obb/com.telltalegames.minecraftXXX/ (100 if Season One, 200 if Season Two).</li></ul><ul id="15eb8742-566a-80ce-ac2f-d81cf19d29ba" class="bulleted-list"><li style="list-style-type:disc">Copy the folders in /Android/data/com.telltalegames.minecraftXXX/ (100 if Season One, 200 if Season Two).</li></ul><ul id="15eb8742-566a-802b-b679-df27b16e8d39" class="bulleted-list"><li style="list-style-type:disc">You can now open the game, enjoy!</li></ul><p id="15eb8742-566a-80b0-a5be-ca7fc4ada5f3" class="">
+	</p><p id="15eb8742-566a-8036-8897-f201fea825d1" class="">
+	</p><figure id="15eb8742-566a-808a-a542-e23df6439643" class="image"><a href="Android%2015eb8742566a80c2ae00de09765a498d/image.png"><img style="width:707.9921875px" src="Android%2015eb8742566a80c2ae00de09765a498d/image.png"></a></figure><h3 id="15eb8742-566a-80e7-a536-f7f1a07ce482" class=""><strong>Your Season One OBB folder should look like this. Note the directory.</strong></h3><p id="15eb8742-566a-80b4-a2ff-c6d0f3ff57b3" class="">
+	</p><figure id="15eb8742-566a-80fb-affd-c53fac0ed6b5" class="image"><a href="Android%2015eb8742566a80c2ae00de09765a498d/image%201.png"><img style="width:707.9921875px" src="Android%2015eb8742566a80c2ae00de09765a498d/image%201.png"></a></figure><h3 id="15eb8742-566a-80b3-b602-c58a0ca2e7dc" class=""><strong>Your Season One Data folder should look like this. Note the directory.</strong></h3><p id="15eb8742-566a-80e4-81d7-f5f8ac0aaf4a" class="">
+	</p><figure id="15eb8742-566a-801c-ac58-f1431ab14470" class="image"><a href="Android%2015eb8742566a80c2ae00de09765a498d/image%202.png"><img style="width:707.984375px" src="Android%2015eb8742566a80c2ae00de09765a498d/image%202.png"></a></figure><h3 id="15eb8742-566a-802b-a72c-fca027dea4a8" class=""><strong>Your Season Two OBB folder should look like this. Note the directory.</strong></h3><p id="15eb8742-566a-80df-abd3-d76b7c0e35d6" class="">
+	</p><figure id="15eb8742-566a-8049-9692-dae50be63eec" class="image"><a href="Android%2015eb8742566a80c2ae00de09765a498d/image%203.png"><img style="width:707.984375px" src="Android%2015eb8742566a80c2ae00de09765a498d/image%203.png"></a></figure><h3 id="15eb8742-566a-80c0-ab50-edf1d7af7fe9" class=""><strong>Your Season Two Data/Files folder should look like this. Note the directory.</strong></h3><p id="15eb8742-566a-80df-a6f4-cd5c95188423" class="">
+	</p><figure id="15eb8742-566a-80d2-a0fe-e75c854b7319" class="image"><a href="Android%2015eb8742566a80c2ae00de09765a498d/image%204.png"><img style="width:707.984375px" src="Android%2015eb8742566a80c2ae00de09765a498d/image%204.png"></a></figure><h3 id="15eb8742-566a-80c2-9805-efef15bea81c" class=""><strong>Your Telltale folder should look like this. Note the directory.</strong></h3><div id="15eb8742-566a-808c-bcf1-fed0e130f598" class="column-list"><div id="15eb8742-566a-80ba-bbe6-e2446540db93" style="width:50%" class="column"><h1 id="15eb8742-566a-804e-aebe-e90d94d2db4e" class=""><strong>Getting crashes? Try VPhoneOS</strong></h1><ul id="15eb8742-566a-8055-b427-ce15d4304c97" class="bulleted-list"><li style="list-style-type:disc">Click this link to access the VPhoneOS website:&nbsp;<a href="https://www.vphoneos.com/index">https://www.vphoneos.com/index</a>.</li></ul><ul id="15eb8742-566a-8023-92a5-e5df3cb37731" class="bulleted-list"><li style="list-style-type:disc">Press "Android 7" to download the VPhoneOS APK.</li></ul><ul id="15eb8742-566a-8074-a586-cc69958c2d5e" class="bulleted-list"><li style="list-style-type:disc">Once the download is complete, install the APK and open the app.</li></ul><ul id="15eb8742-566a-80c8-8420-ea8d3da71b57" class="bulleted-list"><li style="list-style-type:disc">(Android 12+ exclusive step, click "Ignore and enter VPhoneOS" if you do not want the Virtual Machine to run in the background)&nbsp;Follow the steps on screen to bypass the Android 12+ feature that limits background processes. The steps are very detailed and easy to follow. This isn't essential to run the game, but it will keep your game running even if you close your device.</li></ul><ul id="15eb8742-566a-8099-9728-c40b5f115ac1" class="bulleted-list"><li style="list-style-type:disc">Select Android 7 and press "Create new instance", then click on your new instance.</li></ul><ul id="15eb8742-566a-807f-8e2d-ca29457243d6" class="bulleted-list"><li style="list-style-type:disc">Press Import&amp;Export (highlighted in the image), then click Import. Select the Files tab on the top bar, and select the MCSM folder as your directory.</li></ul><ul id="15eb8742-566a-807c-97f0-d19ac8296ec3" class="bulleted-list"><li style="list-style-type:disc">Import all the files and download FV File Explorer on the VM, then follow the instructions for "No PC" above starting with step 5.</li></ul><ul id="15eb8742-566a-803d-bca3-df034187f960" class="bulleted-list"><li style="list-style-type:disc">You're finally done! You can open the VPhoneOS app to play the game, enjoy!<p id="d1e61381-6999-44e5-b2fb-2b60d1827199" class="">Note: If you play Episode 7, there is a chance it will crash when you have the VR Headset on, the only thing you can do is place a save file in that is past the VR Scene in the game.</p><p id="2a5e8c92-998d-4365-9b21-43b03d453b77" class="">Note 2: when using VPhoneOS, the game will run at a max 60fps but the audio can be delayed by around 0.02 seconds, however it will sometimes at certain scenes play back normally.</p></li></ul></div><div id="15eb8742-566a-805e-b123-e42e5c687935" style="width:50%" class="column"><figure id="15eb8742-566a-8020-be3b-c815528134e0" class="image"><a href="Android%2015eb8742566a80c2ae00de09765a498d/image%205.png"><img style="width:432px" src="Android%2015eb8742566a80c2ae00de09765a498d/image%205.png"></a></figure></div></div><h1 id="15eb8742-566a-8087-a189-d8cdcb4ad295" class=""><strong>Troubleshooting</strong></h1><p id="15eb8742-566a-8070-868f-e27884cce692" class="">If you are getting this error, you have not applied the OBB files correctly. See the above for directions.</p><figure id="15eb8742-566a-8047-b431-d23bc865b037" class="image"><a href="Android%2015eb8742566a80c2ae00de09765a498d/image%206.png"><img style="width:707.984375px" src="Android%2015eb8742566a80c2ae00de09765a498d/image%206.png"></a></figure><figure id="15eb8742-566a-8059-924e-dcc83d851cf2" class="image"><a href="Android%2015eb8742566a80c2ae00de09765a498d/image%207.png"><img style="width:707.984375px" src="Android%2015eb8742566a80c2ae00de09765a498d/image%207.png"></a></figure><p id="15eb8742-566a-80c9-9313-f7a793dfab6a" class="">
+	</p><p id="15eb8742-566a-80e2-9b8d-d6ce804dc7c1" class="">Episodes "Coming Soon" or "Not Downloaded" means that you did not place the Data or Telltale folder in the right place, or at all. Remember that the Telltale folder goes on the root of the phone.</p><figure id="15eb8742-566a-80a4-b95e-e0ff761f3598" class="image"><a href="Android%2015eb8742566a80c2ae00de09765a498d/image%208.png"><img style="width:707.984375px" src="Android%2015eb8742566a80c2ae00de09765a498d/image%208.png"></a></figure><p id="15eb8742-566a-80fb-838b-dfe64191c946" class="">
+	</p><h2 id="15eb8742-566a-8022-9bad-fe9ea935e966" class=""><strong>Notes</strong></h2><p id="15eb8742-566a-8008-b023-fd248e9dc806" class="">Note: It seems that S2 is a lot more stable than S1. Many people have reported fatal errors on S1, while S2 works in some capacity, but this will vary per device.</p><p id="15eb8742-566a-80c7-a553-e3802d5d3f4d" class="">Note 2:&nbsp;The game works on anything Android based, so Oculus, Ouya, Fire tablets, Chromebooks, etc</p><p id="15eb8742-566a-80d9-b9ac-cde669216d77" class="">Note 3: The game seems to not run at all on the Google Pixel phones, it also won't run pretty well on any phone running 32 bit (armeabi-v7a)</p><p id="15eb8742-566a-802d-9500-d1e446d1b7b5" class="">Note 4: Season 1 runs mostly perfectly with VPhoneOS, except for 3 bugs: There is a slight delay between characters' voices and when their mouths move, however it isn't too noticeable. There is also no music for the majority of Episode 7. The game also crashes at a specific scene in Episode 7, however this can be bypassed by exporting the telltale folder (which contains your saves), playing the game on your device without VPhoneOS until you get past the crash and save, then import your save back into VPhoneOS and continue playing normally. We will either find a solution to these bugs or find another Android VM without bugs.</p><p id="15eb8742-566a-80aa-babe-ff94c8102486" class="">Note 5: if you use a Android CPU (eg: Adreno) and you are using a newer model of Android, your game will still have a chance of showing black/corrupted textures, however there is no fix for this, unless if you just buy a phone Android 11 or lower.</p><p id="15eb8742-566a-8084-8226-fe3f8f0daa2f" class="">Note 6: Story Mode does work on Chromebooks (which are Android based), but you have to be in Developer Mode.&nbsp;<a href="https://www.howtogeek.com/210817/how-to-enable-developer-mode-on-your-chromebook/">Here is a good guide to enabling developer mode</a>. Please do note <mark class="highlight-red">that&nbsp;this will wipe everything from your Chromebook.</mark></p><p id="15eb8742-566a-8010-b210-e0e13afe5ec5" class="">Note 7: Tegra S1 is unfortunately lost.</p><p id="15eb8742-566a-80b3-a12b-f90c0e915456" class="">
+	</p><h2 id="15eb8742-566a-80de-87bc-fc594b84430b" class=""><strong>Info regarding APKAwardBefore</strong></h2><p id="15eb8742-566a-8072-a6da-d2e6f29378a5" class=""><strong>we would have recommended APKAward to get the files,&nbsp;</strong><strong><a href="https://drive.google.com/file/d/10hSY9wN5vvflXbKWoohpzHkqx4v5hYv_/view?usp=sharing">but they decided to start redirecting their website and downloading random files to the users device.</a></strong></p><p id="15eb8742-566a-80d0-9b78-d262a8bfdef5" class="">
+	</p><p id="15eb8742-566a-8014-83ae-c3da0e22854c" class="">Important&nbsp;Note: As Android phones’ architecture becomes increasingly different to hardware from 2018, MCSM will grow increasingly unstable with every new phone and software update. Some minor to major graphical glitches will almost certainly occur. It should also be said that you need to download the proper apk for your device (eg: Mali or Adreno). If you don’t, everything will appear dark, textures will not show up, etc. Google is your best friend for checking your GPU. If you still don't know, going to Settings and About Phone should help.</p><h3 id="15eb8742-566a-807e-a87e-c0c9232f479f" class=""><em>Examples:</em></h3><figure id="15eb8742-566a-8099-bc0a-e67f29c3cd0f" class="image"><a href="Android%2015eb8742566a80c2ae00de09765a498d/image%209.png"><img style="width:624px" src="Android%2015eb8742566a80c2ae00de09765a498d/image%209.png"></a></figure><figure id="15eb8742-566a-80c1-b7de-e290e6c58123" class="image"><a href="Android%2015eb8742566a80c2ae00de09765a498d/image%2010.png"><img style="width:624px" src="Android%2015eb8742566a80c2ae00de09765a498d/image%2010.png"></a></figure><figure id="15eb8742-566a-8057-86ec-d0d9d627b79e" class="image"><a href="Android%2015eb8742566a80c2ae00de09765a498d/image%2011.png"><img style="width:640px" src="Android%2015eb8742566a80c2ae00de09765a498d/image%2011.png"></a></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
