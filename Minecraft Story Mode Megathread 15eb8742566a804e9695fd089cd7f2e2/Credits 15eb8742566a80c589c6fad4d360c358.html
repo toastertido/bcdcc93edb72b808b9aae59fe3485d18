@@ -1,0 +1,716 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Credits</title><style>
+	/* cspell:disable-file */
+	/* webkit printing magic: print all background colors */
+	html {
+		-webkit-print-color-adjust: exact;
+	}
+	* {
+		box-sizing: border-box;
+		-webkit-print-color-adjust: exact;
+	}
+	
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	@media only screen {
+		body {
+			margin: 2em auto;
+			max-width: 900px;
+			color: rgb(55, 53, 47);
+		}
+	}
+	
+	body {
+		line-height: 1.5;
+		white-space: pre-wrap;
+	}
+	
+	a,
+	a.visited {
+		color: inherit;
+		text-decoration: underline;
+	}
+	
+	.pdf-relative-link-path {
+		font-size: 80%;
+		color: #444;
+	}
+	
+	h1,
+	h2,
+	h3 {
+		letter-spacing: -0.01em;
+		line-height: 1.2;
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+	
+	.page-title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin-top: 0;
+		margin-bottom: 0.75em;
+	}
+	
+	h1 {
+		font-size: 1.875rem;
+		margin-top: 1.875rem;
+	}
+	
+	h2 {
+		font-size: 1.5rem;
+		margin-top: 1.5rem;
+	}
+	
+	h3 {
+		font-size: 1.25rem;
+		margin-top: 1.25rem;
+	}
+	
+	.source {
+		border: 1px solid #ddd;
+		border-radius: 3px;
+		padding: 1.5em;
+		word-break: break-all;
+	}
+	
+	.callout {
+		border-radius: 3px;
+		padding: 1rem;
+	}
+	
+	figure {
+		margin: 1.25em 0;
+		page-break-inside: avoid;
+	}
+	
+	figcaption {
+		opacity: 0.5;
+		font-size: 85%;
+		margin-top: 0.5em;
+	}
+	
+	mark {
+		background-color: transparent;
+	}
+	
+	.indented {
+		padding-left: 1.5em;
+	}
+	
+	hr {
+		background: transparent;
+		display: block;
+		width: 100%;
+		height: 1px;
+		visibility: visible;
+		border: none;
+		border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+	}
+	
+	img {
+		max-width: 100%;
+	}
+	
+	@media only print {
+		img {
+			max-height: 100vh;
+			object-fit: contain;
+		}
+	}
+	
+	@page {
+		margin: 1in;
+	}
+	
+	.collection-content {
+		font-size: 0.875rem;
+	}
+	
+	.column-list {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.column {
+		padding: 0 1em;
+	}
+	
+	.column:first-child {
+		padding-left: 0;
+	}
+	
+	.column:last-child {
+		padding-right: 0;
+	}
+	
+	.table_of_contents-item {
+		display: block;
+		font-size: 0.875rem;
+		line-height: 1.3;
+		padding: 0.125rem;
+	}
+	
+	.table_of_contents-indent-1 {
+		margin-left: 1.5rem;
+	}
+	
+	.table_of_contents-indent-2 {
+		margin-left: 3rem;
+	}
+	
+	.table_of_contents-indent-3 {
+		margin-left: 4.5rem;
+	}
+	
+	.table_of_contents-link {
+		text-decoration: none;
+		opacity: 0.7;
+		border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+	}
+	
+	table,
+	th,
+	td {
+		border: 1px solid rgba(55, 53, 47, 0.09);
+		border-collapse: collapse;
+	}
+	
+	table {
+		border-left: none;
+		border-right: none;
+	}
+	
+	th,
+	td {
+		font-weight: normal;
+		padding: 0.25em 0.5em;
+		line-height: 1.5;
+		min-height: 1.5em;
+		text-align: left;
+	}
+	
+	th {
+		color: rgba(55, 53, 47, 0.6);
+	}
+	
+	ol,
+	ul {
+		margin: 0;
+		margin-block-start: 0.6em;
+		margin-block-end: 0.6em;
+	}
+	
+	li > ol:first-child,
+	li > ul:first-child {
+		margin-block-start: 0.6em;
+	}
+	
+	ul > li {
+		list-style: disc;
+	}
+	
+	ul.to-do-list {
+		padding-inline-start: 0;
+	}
+	
+	ul.to-do-list > li {
+		list-style: none;
+	}
+	
+	.to-do-children-checked {
+		text-decoration: line-through;
+		opacity: 0.375;
+	}
+	
+	ul.toggle > li {
+		list-style: none;
+	}
+	
+	ul {
+		padding-inline-start: 1.7em;
+	}
+	
+	ul > li {
+		padding-left: 0.1em;
+	}
+	
+	ol {
+		padding-inline-start: 1.6em;
+	}
+	
+	ol > li {
+		padding-left: 0.2em;
+	}
+	
+	.mono ol {
+		padding-inline-start: 2em;
+	}
+	
+	.mono ol > li {
+		text-indent: -0.4em;
+	}
+	
+	.toggle {
+		padding-inline-start: 0em;
+		list-style-type: none;
+	}
+	
+	/* Indent toggle children */
+	.toggle > li > details {
+		padding-left: 1.7em;
+	}
+	
+	.toggle > li > details > summary {
+		margin-left: -1.1em;
+	}
+	
+	.selected-value {
+		display: inline-block;
+		padding: 0 0.5em;
+		background: rgba(206, 205, 202, 0.5);
+		border-radius: 3px;
+		margin-right: 0.5em;
+		margin-top: 0.3em;
+		margin-bottom: 0.3em;
+		white-space: nowrap;
+	}
+	
+	.collection-title {
+		display: inline-block;
+		margin-right: 1em;
+	}
+	
+	.page-description {
+		margin-bottom: 2em;
+	}
+	
+	.simple-table {
+		margin-top: 1em;
+		font-size: 0.875rem;
+		empty-cells: show;
+	}
+	.simple-table td {
+		height: 29px;
+		min-width: 120px;
+	}
+	
+	.simple-table th {
+		height: 29px;
+		min-width: 120px;
+	}
+	
+	.simple-table-header-color {
+		background: rgb(247, 246, 243);
+		color: black;
+	}
+	.simple-table-header {
+		font-weight: 500;
+	}
+	
+	time {
+		opacity: 0.5;
+	}
+	
+	.icon {
+		display: inline-block;
+		max-width: 1.2em;
+		max-height: 1.2em;
+		text-decoration: none;
+		vertical-align: text-bottom;
+		margin-right: 0.5em;
+	}
+	
+	img.icon {
+		border-radius: 3px;
+	}
+	
+	.user-icon {
+		width: 1.5em;
+		height: 1.5em;
+		border-radius: 100%;
+		margin-right: 0.5rem;
+	}
+	
+	.user-icon-inner {
+		font-size: 0.8em;
+	}
+	
+	.text-icon {
+		border: 1px solid #000;
+		text-align: center;
+	}
+	
+	.page-cover-image {
+		display: block;
+		object-fit: cover;
+		width: 100%;
+		max-height: 30vh;
+	}
+	
+	.page-header-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+	
+	.page-header-icon-with-cover {
+		margin-top: -0.72em;
+		margin-left: 0.07em;
+	}
+	
+	.page-header-icon img {
+		border-radius: 3px;
+	}
+	
+	.link-to-page {
+		margin: 1em 0;
+		padding: 0;
+		border: none;
+		font-weight: 500;
+	}
+	
+	p > .user {
+		opacity: 0.5;
+	}
+	
+	td > .user,
+	td > time {
+		white-space: nowrap;
+	}
+	
+	input[type="checkbox"] {
+		transform: scale(1.5);
+		margin-right: 0.6em;
+		vertical-align: middle;
+	}
+	
+	p {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
+	
+	.image {
+		border: none;
+		margin: 1.5em 0;
+		padding: 0;
+		border-radius: 0;
+		text-align: center;
+	}
+	
+	.code,
+	code {
+		background: rgba(135, 131, 120, 0.15);
+		border-radius: 3px;
+		padding: 0.2em 0.4em;
+		border-radius: 3px;
+		font-size: 85%;
+		tab-size: 2;
+	}
+	
+	code {
+		color: #eb5757;
+	}
+	
+	.code {
+		padding: 1.5em 1em;
+	}
+	
+	.code-wrap {
+		white-space: pre-wrap;
+		word-break: break-all;
+	}
+	
+	.code > code {
+		background: none;
+		padding: 0;
+		font-size: 100%;
+		color: inherit;
+	}
+	
+	blockquote {
+		font-size: 1.25em;
+		margin: 1em 0;
+		padding-left: 1em;
+		border-left: 3px solid rgb(55, 53, 47);
+	}
+	
+	.bookmark {
+		text-decoration: none;
+		max-height: 8em;
+		padding: 0;
+		display: flex;
+		width: 100%;
+		align-items: stretch;
+	}
+	
+	.bookmark-title {
+		font-size: 0.85em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		height: 1.75em;
+		white-space: nowrap;
+	}
+	
+	.bookmark-text {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.bookmark-info {
+		flex: 4 1 180px;
+		padding: 12px 14px 14px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	
+	.bookmark-image {
+		width: 33%;
+		flex: 1 1 180px;
+		display: block;
+		position: relative;
+		object-fit: cover;
+		border-radius: 1px;
+	}
+	
+	.bookmark-description {
+		color: rgba(55, 53, 47, 0.6);
+		font-size: 0.75em;
+		overflow: hidden;
+		max-height: 4.5em;
+		word-break: break-word;
+	}
+	
+	.bookmark-href {
+		font-size: 0.75em;
+		margin-top: 0.25em;
+	}
+	
+	.sans { font-family: Wingdings; }
+	.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+	.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+	.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+	.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+	.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+	.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+	.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+	.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+	.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+	.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+	.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+	.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+	.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+	.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+	.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+	.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+	.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+	.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+	.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+	.highlight-default {
+		color: rgba(55, 53, 47, 1);
+	}
+	.highlight-gray {
+		color: rgba(120, 119, 116, 1);
+		fill: rgba(120, 119, 116, 1);
+	}
+	.highlight-brown {
+		color: rgba(159, 107, 83, 1);
+		fill: rgba(159, 107, 83, 1);
+	}
+	.highlight-orange {
+		color: rgba(217, 115, 13, 1);
+		fill: rgba(217, 115, 13, 1);
+	}
+	.highlight-yellow {
+		color: rgba(203, 145, 47, 1);
+		fill: rgba(203, 145, 47, 1);
+	}
+	.highlight-teal {
+		color: rgba(68, 131, 97, 1);
+		fill: rgba(68, 131, 97, 1);
+	}
+	.highlight-blue {
+		color: rgba(51, 126, 169, 1);
+		fill: rgba(51, 126, 169, 1);
+	}
+	.highlight-purple {
+		color: rgba(144, 101, 176, 1);
+		fill: rgba(144, 101, 176, 1);
+	}
+	.highlight-pink {
+		color: rgba(193, 76, 138, 1);
+		fill: rgba(193, 76, 138, 1);
+	}
+	.highlight-red {
+		color: rgba(212, 76, 71, 1);
+		fill: rgba(212, 76, 71, 1);
+	}
+	.highlight-default_background {
+		color: rgba(55, 53, 47, 1);
+	}
+	.highlight-gray_background {
+		background: rgba(241, 241, 239, 1);
+	}
+	.highlight-brown_background {
+		background: rgba(244, 238, 238, 1);
+	}
+	.highlight-orange_background {
+		background: rgba(251, 236, 221, 1);
+	}
+	.highlight-yellow_background {
+		background: rgba(251, 243, 219, 1);
+	}
+	.highlight-teal_background {
+		background: rgba(237, 243, 236, 1);
+	}
+	.highlight-blue_background {
+		background: rgba(231, 243, 248, 1);
+	}
+	.highlight-purple_background {
+		background: rgba(244, 240, 247, 0.8);
+	}
+	.highlight-pink_background {
+		background: rgba(249, 238, 243, 0.8);
+	}
+	.highlight-red_background {
+		background: rgba(253, 235, 236, 1);
+	}
+	.block-color-default {
+		color: inherit;
+		fill: inherit;
+	}
+	.block-color-gray {
+		color: rgba(120, 119, 116, 1);
+		fill: rgba(120, 119, 116, 1);
+	}
+	.block-color-brown {
+		color: rgba(159, 107, 83, 1);
+		fill: rgba(159, 107, 83, 1);
+	}
+	.block-color-orange {
+		color: rgba(217, 115, 13, 1);
+		fill: rgba(217, 115, 13, 1);
+	}
+	.block-color-yellow {
+		color: rgba(203, 145, 47, 1);
+		fill: rgba(203, 145, 47, 1);
+	}
+	.block-color-teal {
+		color: rgba(68, 131, 97, 1);
+		fill: rgba(68, 131, 97, 1);
+	}
+	.block-color-blue {
+		color: rgba(51, 126, 169, 1);
+		fill: rgba(51, 126, 169, 1);
+	}
+	.block-color-purple {
+		color: rgba(144, 101, 176, 1);
+		fill: rgba(144, 101, 176, 1);
+	}
+	.block-color-pink {
+		color: rgba(193, 76, 138, 1);
+		fill: rgba(193, 76, 138, 1);
+	}
+	.block-color-red {
+		color: rgba(212, 76, 71, 1);
+		fill: rgba(212, 76, 71, 1);
+	}
+	.block-color-default_background {
+		color: inherit;
+		fill: inherit;
+	}
+	.block-color-gray_background {
+		background: rgba(241, 241, 239, 1);
+	}
+	.block-color-brown_background {
+		background: rgba(244, 238, 238, 1);
+	}
+	.block-color-orange_background {
+		background: rgba(251, 236, 221, 1);
+	}
+	.block-color-yellow_background {
+		background: rgba(251, 243, 219, 1);
+	}
+	.block-color-teal_background {
+		background: rgba(237, 243, 236, 1);
+	}
+	.block-color-blue_background {
+		background: rgba(231, 243, 248, 1);
+	}
+	.block-color-purple_background {
+		background: rgba(244, 240, 247, 0.8);
+	}
+	.block-color-pink_background {
+		background: rgba(249, 238, 243, 0.8);
+	}
+	.block-color-red_background {
+		background: rgba(253, 235, 236, 1);
+	}
+	.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+	.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+	.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+	.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+	.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+	.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+	.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+	.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+	.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+	.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+	.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+	.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+	.select-value-color-pageGlass { background-color: undefined; }
+	.select-value-color-washGlass { background-color: undefined; }
+	
+	.checkbox {
+		display: inline-flex;
+		vertical-align: text-bottom;
+		width: 16;
+		height: 16;
+		background-size: 16px;
+		margin-left: 2px;
+		margin-right: 5px;
+	}
+	
+	.checkbox-on {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+	}
+	
+	.checkbox-off {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+	}
+		
+	</style></head><body style="background-color: #121212; color: white;"><article id="15eb8742-566a-804e-9695-fd089cd7f2e2" class="page sans"><article id="15eb8742-566a-80c5-89c6-fad4d360c358" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">😃</span></div><h1 class="page-title">Credits</h1><p class="page-description"></p></header><div class="page-body"><h1 id="15eb8742-566a-80fe-9dcc-eb13aac1353d" class="">The Screen Pixels</h1><figure id="15eb8742-566a-800b-a48d-fd5cce5f913d" class="image" style="text-align:left"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image.png"><img style="width:562px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image.png"></a></figure><p id="15eb8742-566a-80db-ab7e-ffe8e1c8136d" class=""><strong>aka ReadPixel, r/MinecraftStoryMode mod and the founder/owner of the Megathread</strong></p><p id="15eb8742-566a-80ed-b274-df938d53a0a4" class=""><strong>Created the original Reddit and Google Docs megathreads and created this website and the Discord server.</strong></p><h3 id="15eb8742-566a-80d6-a9aa-f67f4557fae5" class=""><em>@pixelsent on Discord&nbsp; </em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<mark class="highlight-blue"><a href="https://www.youtube.com/@georgearm1253">YouTube</a></mark></h3><p id="15eb8742-566a-8068-8d43-c16a982860ae" class="">
+	</p><figure id="15eb8742-566a-8080-ae47-d288c398cfe9" class="image" style="text-align:left"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%201.png"><img style="width:562px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%201.png"></a></figure><p id="15eb8742-566a-80cb-9ace-f55130065d74" class=""><strong>aka&nbsp;DroidTheAwesome, and Megathread co-owner</strong></p><p id="15eb8742-566a-800e-b110-f729e9ce9c7d" class=""><strong>Helped with the Google Docs&nbsp;Megathread, creating this website, and moderating the&nbsp;Megathread Discord server.</strong></p><h3 id="15eb8742-566a-805a-aa38-ff87612b1014" class="">@droidtheawesome on Discord&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<mark class="highlight-blue"><a href="https://www.reddit.com/user/DroidTheAwesome/">Reddit</a></mark></h3><div id="15eb8742-566a-80f3-b411-d85136a6c08b" class="column-list"><div id="15eb8742-566a-8054-b888-ea3ce5b8d473" style="width:31.25%" class="column"><figure id="15eb8742-566a-80f4-8549-e6dba651719e" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%202.png"><img style="width:192px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%202.png"></a></figure><p id="15eb8742-566a-804e-8d51-cda5ba4203ed" class="">
+	</p></div><div id="15eb8742-566a-80b9-8ee7-e8b19d0bf9e2" style="width:68.75%" class="column"><h2 id="15eb8742-566a-804d-b478-f93179d3451b" class=""><strong>DrEzeanDev</strong></h2><p id="15eb8742-566a-8072-9114-e95f0f7eff53" class=""><em>aka PAMAThinkingMachine, r/MinecraftStoryMode mod, Editor, Contributor</em></p><p id="15eb8742-566a-8074-8887-d173ce55be08" class=""><strong>Helps in editing and adding to the website, as well as helping with getting the Megathread pinned on r/MinecraftStoryMode</strong></p><h3 id="15eb8742-566a-8026-be32-cde0e78184fd" class="">@drezeandev&nbsp;on&nbsp;Discord <mark class="highlight-blue"><a href="https://www.reddit.com/user/PAMAThinkingMachine/">Reddit</a></mark></h3></div></div><div id="15eb8742-566a-80f6-8b5d-e8d68d1097e8" class="column-list"><div id="1d9a97b8-3079-445b-97c0-8befd7ec6f72" style="width:31.25%" class="column"><figure id="15eb8742-566a-80ff-affd-d584dc68cde7" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%203.png"><img style="width:1310px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%203.png"></a></figure><p id="f86a5915-bc53-49b9-8315-d50137888156" class="">
+	</p></div><div id="12b1022f-6202-434a-bb36-2eb507e286e0" style="width:68.75%" class="column"><h2 id="f85e1588-7c40-4b62-a6ed-35b47189bdd4" class="">RedCraft</h2><p id="1f411d3d-db3f-4c34-baac-984d609a21b9" class=""><em>Editor, Contributor</em></p><p id="d19df35a-0c27-42e6-9445-311ca7a78806" class=""><strong>Helps with editing the website, the Greek translator for the Minecraft Story Mode Netflix Archive project, discovered APKAward's spyware, and also took the 1.4 screenshots for the comparison section on the&nbsp;</strong><strong><a href="https://mcsmmegathread.github.io/mcsmmegathread-official/-%20iOS.html">iOS</a></strong><strong>&nbsp;page.</strong></p><h3 id="98a450d1-25d8-4729-b70a-33fbee4b8826" class="">@redcrft on Discord</h3></div></div><div id="15eb8742-566a-8016-bad1-ce89e5623f08" class="column-list"><div id="45fc3b7d-10fe-43a0-8d3a-f44955b0b37b" style="width:31.25%" class="column"><figure id="15eb8742-566a-80b8-827d-f146847dc28b" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%204.png"><img style="width:815px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%204.png"></a></figure><p id="15eb8742-566a-806c-927f-fca82b180923" class="">
+	</p></div><div id="8e51b460-d54e-4a97-b47c-13f33dbdb053" style="width:68.75%" class="column"><h2 id="8a0c7471-372d-48b0-9611-e00de6f8996b" class=""><strong>RileyGaming978</strong></h2><p id="10f0b02f-9418-4e49-b73b-cbdfe7543410" class=""><em>Editor, Contributor</em></p><p id="13c41c74-476c-4ec3-ac83-0f61b03dac84" class=""><strong>Helps with editing the website&nbsp;and is the creator of the Season Two interactive.</strong></p><h3 id="5c06401d-f41a-4597-b1ec-c21a61d4614b" class="">@rileygaming978 on Discord</h3><p id="15eb8742-566a-80d0-953a-d5269d916524" class="">
+	</p></div></div><p id="15eb8742-566a-80a3-b6dc-f6685e87d206" class="">
+	</p><div id="15eb8742-566a-8083-ae3b-c669b37910c6" class="column-list"><div id="0bdb090d-db40-42c5-afd4-99414d3f0b2a" style="width:31.25%" class="column"><figure id="15eb8742-566a-8006-8f00-ff38570fcb5b" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%205.png"><img style="width:206.875px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%205.png"></a></figure></div><div id="5709b051-7aec-406b-9e89-0777b4e629e4" style="width:68.75%" class="column"><h2 id="5b64dac7-f4b4-44a7-8d92-cb11c0ece424" class=""><strong>imapirate368</strong></h2><p id="3d10ccf6-ad50-4c0c-87c0-d1b3582f920a" class=""><em>Editor, Contributor</em></p><p id="043d2400-c3d7-4881-8451-55f8d758ca52" class=""><strong>Rewrote the Wii U homebrew section to support NUSspli.</strong></p><p id="15eb8742-566a-8057-8d35-f7acccf6e8bf" class=""><strong>Tested some iOS stuff for us.</strong></p><h3 id="18f71f40-d5ac-4bdd-bee8-43144af2a9b1" class="">@imapirate368 on Discord</h3></div></div><p id="15eb8742-566a-8002-a5ca-d6ce1dbde8e6" class="">
+	</p><div id="15eb8742-566a-802a-8d79-ed4a58ead60e" class="column-list"><div id="68488dd2-6706-4bb1-893d-635a20a3ba9d" style="width:31.25%" class="column"><p id="79741776-565b-4d03-a264-9c0b56bc4788" class="">
+	</p><figure id="15eb8742-566a-8020-acbe-e5b16b93d840" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%206.png"><img style="width:206.875px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%206.png"></a></figure></div><div id="9dd2cabc-a431-4347-b6d9-20d5a3fef10d" style="width:68.75%" class="column"><h2 id="ccc58a50-4ec5-45d0-833a-c24f700d5417" class=""><strong>Jesse</strong></h2><p id="d366f7ba-3cdd-4659-abf5-68a5d292f1b8" class=""><em>Editor, Contributor</em></p><p id="4f243d6a-9ea8-49b1-805d-0ef0ca53a843" class=""><strong>Found a way to get the Game Working on M1 Macs and archived the Microsoft Store Version of S1 and S2.</strong></p><p id="15eb8742-566a-800b-8e11-e9e06e6351ea" class=""><strong>Wrote the guide on the Windows and MacOS page for those.</strong></p><h3 id="6868c906-66c1-4e9a-af59-0dbf1bf6485e" class="">@jessefromthegamemcsm on Discord</h3><p id="0e6c7c4b-6cf8-496e-b020-79e573156c1b" class="">
+	</p></div></div><p id="15eb8742-566a-805b-88bd-e080acfbaf15" class="">
+	</p><div id="15eb8742-566a-8058-a252-d44a7e872ba1" class="column-list"><div id="bd0c562c-34a1-4490-af08-820f8127d818" style="width:31.25%" class="column"><p id="83b5dc84-fa2e-4660-bf9b-d50356a6bb2c" class="">
+	</p><figure id="15eb8742-566a-808f-b4db-c5f1c2a29a62" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%207.png"><img style="width:206.875px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%207.png"></a></figure></div><div id="dc921895-407d-4eed-b82e-b4a9263fc916" style="width:68.75%" class="column"><h2 id="bd7d1a33-d2a3-48f7-a6f4-a0a1a01347bc" class=""><strong>Rayz0rum</strong></h2><p id="18cbd18d-d90a-40b8-8870-7c3b682942a5" class=""><em>Editor, Contributor</em></p><p id="0d07faf2-caaa-4803-8625-da2067a7834a" class=""><strong>Helped making the site newbie-friendly, reworking many of the sites to have big Download hyperlinks and adding newbie-friendly additions.</strong></p><h3 id="73e813a6-01bf-44e0-a6d1-2c070de619be" class="">@Rayz0rum on Discord</h3><p id="690f20b4-7bff-4a52-a9d7-1befde05176f" class="">
+	</p></div></div><h1 id="15eb8742-566a-808d-be7f-db459b063e7e" class=""><strong>Developers</strong></h1><h2 id="15eb8742-566a-80cf-9a15-f4e16dfe61e7" class=""><em><strong>Click on the logos to go to the respective companies website.</strong></em></h2><div id="15eb8742-566a-80c0-80d0-d83276c438ee" class="column-list"><div id="ecc6ae8a-3f88-4425-a99e-b629a70a6023" style="width:50%" class="column"><figure id="15eb8742-566a-80aa-9e7f-dc7eb57eada6" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%208.png"><img style="width:330.9921875px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%208.png"></a></figure></div><div id="aff599ec-0a78-431d-9363-61436ddf94f4" style="width:50%" class="column"><figure id="15eb8742-566a-8088-891f-d73f36eda690" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%209.png"><img style="width:2048px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%209.png"></a></figure></div></div><p id="15eb8742-566a-804d-ac89-c767e94eb4a8" class="">Creators of Minecraft: Story Mode                    Creators of Minecraft and publishers of Story Mode</p><p id="15eb8742-566a-80bd-982f-c7df7bc08bf2" class="">
+	</p><h1 id="15eb8742-566a-80ef-a0fc-dc018fa0602c" class=""><strong>Special Thanks and Contributors</strong></h1><div id="15eb8742-566a-80c4-af87-d41f81003df1" class="column-list"><div id="56b3d796-40a1-429b-ac05-37dd0fb4a599" style="width:31.25%" class="column"><p id="d7cc8bde-40a3-4364-a0ec-5d4d4e141555" class="">
+	</p><figure id="15eb8742-566a-8020-be2b-cc6d42bb96f0" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%2010.png"><img style="width:206.875px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%2010.png"></a></figure></div><div id="a90e61f3-7342-449e-8ae0-ff824d412c6c" style="width:68.75%" class="column"><h2 id="4634f931-99e5-4dac-b449-7b9c188a0920" class="">KrusherDS</h2><p id="159b1bd0-c7f4-406a-bceb-a640e678a391" class="">Made the Vphone OS tutorial, and Megathread editor.</p><h3 id="908624fe-e63a-42e3-8ccd-bba36f829fa1" class="">@deathstrike6464 on Discord</h3><p id="c0eca7d7-df9d-4229-9a17-6fd71c40903d" class="">
+	</p></div></div><p id="15eb8742-566a-8032-9103-fcbbaf29d393" class="">
+	</p><div id="15eb8742-566a-8091-b3db-da94f00b417c" class="column-list"><div id="ec859e73-7138-4095-930c-d9b85502e6db" style="width:31.25%" class="column"><p id="d5d0a61f-3f36-4d01-a383-52cf67aace1a" class="">
+	</p><figure id="15eb8742-566a-80d7-967d-f12f2a70b073" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%2011.png"><img style="width:900px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%2011.png"></a></figure></div><div id="bfa008ff-4d53-4ad6-85fe-957f4c3439e9" style="width:68.75%" class="column"><h2 id="ea564ece-1930-4f87-af60-91e4495a0c29" class=""><strong>Pox1016</strong></h2><p id="e8f8b845-a5b9-4d3f-bddb-2ce74edfbf47" class="">Creator of the&nbsp;<a href="https://mcsmmegathread.github.io/mcsmmegathread-official/-%20NetflixYoutube.html">Netflix Archive</a>, and Megathread Editor.</p></div></div><p id="15eb8742-566a-8037-906a-ca4b333c5c1d" class="">
+	</p><div id="15eb8742-566a-809e-9b09-d58600319859" class="column-list"><div id="b2d70268-edda-4ace-9bf8-fa33e44d07aa" style="width:31.25%" class="column"><figure id="15eb8742-566a-800b-bdce-e94a2da29063" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%2012.png"><img style="width:206.875px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%2012.png"></a></figure></div><div id="77bdd32d-50e5-4053-bd0b-e67d9ab1d05b" style="width:68.75%" class="column"><h2 id="29224c68-0acd-4716-aef1-30bdeb1abad4" class="">Aster</h2><p id="6d21e272-3035-428b-9682-03851f415238" class="">Creator of the&nbsp;<a href="https://mcsmmegathread.github.io/mcsmmegathread-official/-%20NetflixYoutube.html">Netflix Archive</a>, and Megathread Editor.</p><h3 id="15eb8742-566a-801d-b3f3-d77d002c8eb0" class="">@penffle. on Discord</h3><p id="15eb8742-566a-80a2-a2c7-ddacae1febd5" class="">
+	</p></div></div><p id="15eb8742-566a-809d-a2d8-d825b5b1bf9b" class="">
+	</p><div id="15eb8742-566a-8014-bc49-cbb490b7c2a2" class="column-list"><div id="a518e0b3-6af1-4efb-bbac-d9450dd0e99d" style="width:31.25%" class="column"><figure id="15eb8742-566a-8046-925f-da3168c57713" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%2013.png"><img style="width:206.875px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%2013.png"></a></figure></div><div id="b5eda8e5-975a-4144-b771-d00b62e59410" style="width:68.75%" class="column"><h2 id="a300880d-e8b6-49fd-87e0-46951f87ff6d" class="">John</h2><p id="15eb8742-566a-80bb-a925-c0ad11c22d11" class="">Dumped the episode files for iOS Season Two!</p><p id="15eb8742-566a-800b-a7ef-ea61c364185b" class="">No credits! Wished to remain anonymous.</p><p id="91e6722f-5ac7-42ff-bc24-7466a9f33580" class="">
+	</p></div></div><p id="15eb8742-566a-80cb-9e0a-f71a3ae782b8" class="">
+	</p><div id="15eb8742-566a-8007-a129-c25aab4ce5ce" class="column-list"><div id="a0b89704-eb3f-4b7c-9de3-b167589f80e6" style="width:31.25%" class="column"><figure id="15eb8742-566a-8091-9114-c3d37044c0c1" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%2014.png"><img style="width:206.875px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%2014.png"></a></figure></div><div id="31caad69-fdd9-4e3a-8272-5d2b5ffd46e0" style="width:68.75%" class="column"><h2 id="5934a446-8517-48b9-8e0c-140a01342678" class=""><strong>Knollad Knolladious</strong></h2><p id="fef16528-64da-4a4b-ab2a-fd1169911da6" class="">Found the&nbsp;<a href="https://mcsmmegathread.github.io/mcsmmegathread-official/-%20Windows.html">Microsoft Store version</a>&nbsp;on the&nbsp;<a href="https://archive.org/details/telltale-games.-minecraft-story-mode-atelltale-games-ser-1.11.0.0-x-86-4p-9dzwrngadje/apps.51204.13510798886691332.db3af317-7a8e-4449-a2cd-aea3fd9a5670.jpg">Internet Archive</a>. Also found the&nbsp;<a href="https://mega.nz/file/qhwU1IgK#HbKWYRPBns0CGUEsde4P0AfdTdcP0BNyR_p31xwIYjE">S2 subtitles and languages</a>.</p><p id="ae573037-5566-42ad-856b-f88598d3705b" class="">
+	</p></div></div><p id="15eb8742-566a-80c1-9b3b-d20cd8c3215c" class="">
+	</p><div id="15eb8742-566a-80cf-ba6d-ea719fef89c1" class="column-list"><div id="1aafab01-041e-4b5a-b3fc-57496704d042" style="width:31.25%" class="column"><figure id="15eb8742-566a-80b6-aa89-ee67612ba455" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%2015.png"><img style="width:206.875px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%2015.png"></a></figure></div><div id="de14fdb2-44fc-40af-847d-36cb897d33de" style="width:68.75%" class="column"><h2 id="8d249651-24e6-42c9-bdab-1e30364baa5e" class="">ksagaming</h2><p id="15eb8742-566a-8026-8637-e3c903b66180" class="">Helped make the jailbreak-free method of installing on&nbsp;iOS and made the iOS refresh rate mod.</p><h3 id="a46a0a61-0b88-4ba2-bb01-5e972982440f" class="">@ksagaming on Discord</h3></div></div><p id="15eb8742-566a-8056-824c-dc11920f95b0" class="">
+	</p><div id="15eb8742-566a-80b6-9bfc-fb8b30899816" class="column-list"><div id="d36a811b-33b2-4bb7-a46d-43697d6507cc" style="width:31.25%" class="column"><figure id="15eb8742-566a-8086-81f0-e7b1ed3ee6a9" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%2016.png"><img style="width:240px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%2016.png"></a></figure></div><div id="3d9927f6-f66b-42de-bc95-5d19e3d43794" style="width:68.75%" class="column"><h2 id="4260257d-85e5-4aa9-9be2-1dc1682953af" class="">118811</h2><p id="c6e8d90a-54c7-4c09-9bf9-fa84b94f763a" class="">Wrote the guide for Lutris on the Linux page.</p></div></div><p id="15eb8742-566a-8044-a425-c4951417402c" class="">
+	</p><div id="15eb8742-566a-80aa-a628-e1deaf875e6a" class="column-list"><div id="5804f49b-0416-418b-9e6a-9b6381d70174" style="width:31.25%" class="column"><figure id="15eb8742-566a-80c6-ace1-f565beae28fe" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%2017.png"><img style="width:240px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%2017.png"></a></figure></div><div id="9814c6af-5fd9-484d-9e50-f25c913db120" style="width:68.75%" class="column"><h2 id="60c68486-0a8f-45b7-8899-c8509636e391" class="">Curse</h2><p id="9f0ef4ed-aa53-437d-a89f-da33db3f3bca" class="">Took the 1.7 screenshots for the comparison section on the&nbsp;iOS page.</p><h3 id="15eb8742-566a-8057-ab33-fb8e1c1c96cf" class="">@pibbyforverishere on Discord.</h3></div></div><p id="15eb8742-566a-8028-b142-f23a18256adc" class="">
+	</p><div id="15eb8742-566a-807c-adcd-fb06c38fb336" class="column-list"><div id="bf602184-79d4-48bc-9ebc-a90fee170e90" style="width:31.25%" class="column"><figure id="15eb8742-566a-80d0-be6e-eadcb287760b" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%2018.png"><img style="width:206.875px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%2018.png"></a></figure></div><div id="1db75c52-b425-4510-95a9-21329854d7a9" style="width:68.75%" class="column"><h2 id="37635add-f823-4710-a049-a8546fa3f315" class=""><strong>a7med_gaming</strong></h2><p id="f3c9ed10-f911-4db5-b0d9-50926147cde2" class="">Took the screenshots for the&nbsp;"Completely Ruined Android Experience"&nbsp;section on the&nbsp;Extras&nbsp;page.</p><h3 id="ecc8e6d1-0c01-4d4a-b198-00d5754b821a" class="">@a_.hm on Discord.</h3></div></div><p id="15eb8742-566a-80d3-9c9b-ef78c4349cdb" class="">
+	</p><div id="15eb8742-566a-80b4-bbe0-c0715f1cdc5a" class="column-list"><div id="a9b423ee-3472-4224-a194-5f166810eeb0" style="width:31.25%" class="column"><figure id="15eb8742-566a-80d9-b820-df86b9d2a40e" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%2019.png"><img style="width:206.8671875px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%2019.png"></a></figure></div><div id="4ca67485-6a94-4bac-8d58-23b62435521c" style="width:68.75%" class="column"><h2 id="46051651-ea7c-422f-92e3-6464923cb2d7" class=""><strong>Nathanyal</strong></h2><p id="b69e84d3-2e58-46b4-bc88-5fb171f500b9" class="">Founder and lead mod of r/MinecraftStoryMode. Changed the rules of the sub that allowed the Megathread to be pinned.</p><h3 id="67b99b8f-3bea-40b6-a9e3-41f0aa9c353f" class="">u/Nathanyal on Reddit.</h3></div></div><p id="15eb8742-566a-800d-a947-f0d936aa5924" class="">
+	</p><div id="15eb8742-566a-8027-8265-f70726ec80a1" class="column-list"><div id="1ae1df17-38be-449c-99fa-b6bc87cec809" style="width:31.25%" class="column"><figure id="15eb8742-566a-8006-9b9a-defd78662a21" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%2020.png"><img style="width:206.875px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%2020.png"></a></figure></div><div id="c0dd27bc-3a81-45e8-adae-a91f32d23880" style="width:68.75%" class="column"><h2 id="df76a594-97bc-468f-83f5-85e2a2b95bcf" class=""><strong>AsteroidBK (Rest in peace🌹)</strong></h2><p id="3892be0a-c47c-480d-a763-aa9db730c59e" class="">The original person to archive the Netflix version's videos, and ripped the Story Mode music directly from the game files.</p></div></div><p id="15eb8742-566a-80c0-8b4f-eb3803073786" class="">
+	</p><div id="15eb8742-566a-803c-ac8f-fd79177082a7" class="column-list"><div id="06f753b7-0ba0-4e29-980b-fd00c79fe212" style="width:31.25%" class="column"><figure id="15eb8742-566a-80b0-b3c1-dd36b293c072" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%2021.png"><img style="width:206.875px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%2021.png"></a></figure></div><div id="039bef59-bf67-42e1-8eea-6f7a406bd963" style="width:68.75%" class="column"><h2 id="7298ae7e-0ccf-4aff-bac9-bfe0e33e43d8" class="">SrBig</h2><p id="6c38e071-06f7-4e6e-8dd4-de7b02a0e2df" class="">Helped with the archival of the Netflix version's videos.</p></div></div><p id="15eb8742-566a-8088-bd41-c54985dc8d51" class="">
+	</p><div id="15eb8742-566a-80ad-a391-f2b0f9a6ac38" class="column-list"><div id="a0a6cdea-6823-4d5f-8da9-8f061bfaed27" style="width:31.25%" class="column"><figure id="15eb8742-566a-80fb-bd3c-d0547b8a0f4d" class="image"><a href="Credits%2015eb8742566a80c589c6fad4d360c358/image%2022.png"><img style="width:206.875px" src="Credits%2015eb8742566a80c589c6fad4d360c358/image%2022.png"></a></figure></div><div id="26d3e19f-a4c1-467f-b506-6be1ea1b62c7" style="width:68.75%" class="column"><h2 id="1720c59d-baea-4b3b-9984-b5767d9879c5" class="">Wazzy</h2><p id="be06a5d5-7aee-49b9-b34d-801281bde261" class="">Animator and leader of the Block By Block remake of Minecraft: Story Mode.</p></div></div><p id="15eb8742-566a-807c-87bf-d63130fad740" class="">
+	</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></article></body></html>

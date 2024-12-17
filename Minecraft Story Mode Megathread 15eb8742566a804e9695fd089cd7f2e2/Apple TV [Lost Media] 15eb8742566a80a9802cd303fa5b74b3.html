@@ -1,0 +1,687 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Apple TV [Lost Media]</title><style>
+	/* cspell:disable-file */
+	/* webkit printing magic: print all background colors */
+	html {
+		-webkit-print-color-adjust: exact;
+	}
+	* {
+		box-sizing: border-box;
+		-webkit-print-color-adjust: exact;
+	}
+	
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	@media only screen {
+		body {
+			margin: 2em auto;
+			max-width: 900px;
+			color: rgb(55, 53, 47);
+		}
+	}
+	
+	body {
+		line-height: 1.5;
+		white-space: pre-wrap;
+	}
+	
+	a
+	a.visited {
+		color: inherit;
+		text-decoration: underline;
+	}
+	
+	.pdf-relative-link-path {
+		font-size: 80%;
+		color: #444;
+	}
+	
+	h1,
+	h2,
+	h3 {
+		letter-spacing: -0.01em;
+		line-height: 1.2;
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+	
+	.page-title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin-top: 0;
+		margin-bottom: 0.75em;
+	}
+	
+	h1 {
+		font-size: 1.875rem;
+		margin-top: 1.875rem;
+	}
+	
+	h2 {
+		font-size: 1.5rem;
+		margin-top: 1.5rem;
+	}
+	
+	h3 {
+		font-size: 1.25rem;
+		margin-top: 1.25rem;
+	}
+	
+	.source {
+		border: 1px solid #ddd;
+		border-radius: 3px;
+		padding: 1.5em;
+		word-break: break-all;
+	}
+	
+	.callout {
+		border-radius: 3px;
+		padding: 1rem;
+	}
+	
+	figure {
+		margin: 1.25em 0;
+		page-break-inside: avoid;
+	}
+	
+	figcaption {
+		opacity: 0.5;
+		font-size: 85%;
+		margin-top: 0.5em;
+	}
+	
+	mark {
+		background-color: transparent;
+	}
+	
+	.indented {
+		padding-left: 1.5em;
+	}
+	
+	hr {
+		background: transparent;
+		display: block;
+		width: 100%;
+		height: 1px;
+		visibility: visible;
+		border: none;
+		border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+	}
+	
+	img {
+		max-width: 100%;
+	}
+	
+	@media only print {
+		img {
+			max-height: 100vh;
+			object-fit: contain;
+		}
+	}
+	
+	@page {
+		margin: 1in;
+	}
+	
+	.collection-content {
+		font-size: 0.875rem;
+	}
+	
+	.column-list {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.column {
+		padding: 0 1em;
+	}
+	
+	.column:first-child {
+		padding-left: 0;
+	}
+	
+	.column:last-child {
+		padding-right: 0;
+	}
+	
+	.table_of_contents-item {
+		display: block;
+		font-size: 0.875rem;
+		line-height: 1.3;
+		padding: 0.125rem;
+	}
+	
+	.table_of_contents-indent-1 {
+		margin-left: 1.5rem;
+	}
+	
+	.table_of_contents-indent-2 {
+		margin-left: 3rem;
+	}
+	
+	.table_of_contents-indent-3 {
+		margin-left: 4.5rem;
+	}
+	
+	.table_of_contents-link {
+		text-decoration: none;
+		opacity: 0.7;
+		border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+	}
+	
+	table,
+	th,
+	td {
+		border: 1px solid rgba(55, 53, 47, 0.09);
+		border-collapse: collapse;
+	}
+	
+	table {
+		border-left: none;
+		border-right: none;
+	}
+	
+	th,
+	td {
+		font-weight: normal;
+		padding: 0.25em 0.5em;
+		line-height: 1.5;
+		min-height: 1.5em;
+		text-align: left;
+	}
+	
+	th {
+		color: rgba(55, 53, 47, 0.6);
+	}
+	
+	ol,
+	ul {
+		margin: 0;
+		margin-block-start: 0.6em;
+		margin-block-end: 0.6em;
+	}
+	
+	li > ol:first-child,
+	li > ul:first-child {
+		margin-block-start: 0.6em;
+	}
+	
+	ul > li {
+		list-style: disc;
+	}
+	
+	ul.to-do-list {
+		padding-inline-start: 0;
+	}
+	
+	ul.to-do-list > li {
+		list-style: none;
+	}
+	
+	.to-do-children-checked {
+		text-decoration: line-through;
+		opacity: 0.375;
+	}
+	
+	ul.toggle > li {
+		list-style: none;
+	}
+	
+	ul {
+		padding-inline-start: 1.7em;
+	}
+	
+	ul > li {
+		padding-left: 0.1em;
+	}
+	
+	ol {
+		padding-inline-start: 1.6em;
+	}
+	
+	ol > li {
+		padding-left: 0.2em;
+	}
+	
+	.mono ol {
+		padding-inline-start: 2em;
+	}
+	
+	.mono ol > li {
+		text-indent: -0.4em;
+	}
+	
+	.toggle {
+		padding-inline-start: 0em;
+		list-style-type: none;
+	}
+	
+	/* Indent toggle children */
+	.toggle > li > details {
+		padding-left: 1.7em;
+	}
+	
+	.toggle > li > details > summary {
+		margin-left: -1.1em;
+	}
+	
+	.selected-value {
+		display: inline-block;
+		padding: 0 0.5em;
+		background: rgba(206, 205, 202, 0.5);
+		border-radius: 3px;
+		margin-right: 0.5em;
+		margin-top: 0.3em;
+		margin-bottom: 0.3em;
+		white-space: nowrap;
+	}
+	
+	.collection-title {
+		display: inline-block;
+		margin-right: 1em;
+	}
+	
+	.page-description {
+		margin-bottom: 2em;
+	}
+	
+	.simple-table {
+		margin-top: 1em;
+		font-size: 0.875rem;
+		empty-cells: show;
+	}
+	.simple-table td {
+		height: 29px;
+		min-width: 120px;
+	}
+	
+	.simple-table th {
+		height: 29px;
+		min-width: 120px;
+	}
+	
+	.simple-table-header-color {
+		background: rgb(247, 246, 243);
+		color: black;
+	}
+	.simple-table-header {
+		font-weight: 500;
+	}
+	
+	time {
+		opacity: 0.5;
+	}
+	
+	.icon {
+		display: inline-block;
+		max-width: 1.2em;
+		max-height: 1.2em;
+		text-decoration: none;
+		vertical-align: text-bottom;
+		margin-right: 0.5em;
+	}
+	
+	img.icon {
+		border-radius: 3px;
+	}
+	
+	.user-icon {
+		width: 1.5em;
+		height: 1.5em;
+		border-radius: 100%;
+		margin-right: 0.5rem;
+	}
+	
+	.user-icon-inner {
+		font-size: 0.8em;
+	}
+	
+	.text-icon {
+		border: 1px solid #000;
+		text-align: center;
+	}
+	
+	.page-cover-image {
+		display: block;
+		object-fit: cover;
+		width: 100%;
+		max-height: 30vh;
+	}
+	
+	.page-header-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+	
+	.page-header-icon-with-cover {
+		margin-top: -0.72em;
+		margin-left: 0.07em;
+	}
+	
+	.page-header-icon img {
+		border-radius: 3px;
+	}
+	
+	.link-to-page {
+		margin: 1em 0;
+		padding: 0;
+		border: none;
+		font-weight: 500;
+	}
+	
+	p > .user {
+		opacity: 0.5;
+	}
+	
+	td > .user,
+	td > time {
+		white-space: nowrap;
+	}
+	
+	input[type="checkbox"] {
+		transform: scale(1.5);
+		margin-right: 0.6em;
+		vertical-align: middle;
+	}
+	
+	p {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
+	
+	.image {
+		border: none;
+		margin: 1.5em 0;
+		padding: 0;
+		border-radius: 0;
+		text-align: center;
+	}
+	
+	.code,
+	code {
+		background: rgba(135, 131, 120, 0.15);
+		border-radius: 3px;
+		padding: 0.2em 0.4em;
+		border-radius: 3px;
+		font-size: 85%;
+		tab-size: 2;
+	}
+	
+	code {
+		color: #eb5757;
+	}
+	
+	.code {
+		padding: 1.5em 1em;
+	}
+	
+	.code-wrap {
+		white-space: pre-wrap;
+		word-break: break-all;
+	}
+	
+	.code > code {
+		background: none;
+		padding: 0;
+		font-size: 100%;
+		color: inherit;
+	}
+	
+	blockquote {
+		font-size: 1.25em;
+		margin: 1em 0;
+		padding-left: 1em;
+		border-left: 3px solid rgb(55, 53, 47);
+	}
+	
+	.bookmark {
+		text-decoration: none;
+		max-height: 8em;
+		padding: 0;
+		display: flex;
+		width: 100%;
+		align-items: stretch;
+	}
+	
+	.bookmark-title {
+		font-size: 0.85em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		height: 1.75em;
+		white-space: nowrap;
+	}
+	
+	.bookmark-text {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.bookmark-info {
+		flex: 4 1 180px;
+		padding: 12px 14px 14px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	
+	.bookmark-image {
+		width: 33%;
+		flex: 1 1 180px;
+		display: block;
+		position: relative;
+		object-fit: cover;
+		border-radius: 1px;
+	}
+	
+	.bookmark-description {
+		color: rgba(55, 53, 47, 0.6);
+		font-size: 0.75em;
+		overflow: hidden;
+		max-height: 4.5em;
+		word-break: break-word;
+	}
+	
+	.bookmark-href {
+		font-size: 0.75em;
+		margin-top: 0.25em;
+	}
+	
+	.sans { font-family: Wingdings; }
+	.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+	.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+	.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+	.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+	.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+	.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+	.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+	.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+	.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+	.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+	.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+	.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+	.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+	.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+	.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+	.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+	.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+	.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+	.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+	.highlight-default {
+		color: rgba(55, 53, 47, 1);
+	}
+	.highlight-gray {
+		color: rgba(120, 119, 116, 1);
+		fill: rgba(120, 119, 116, 1);
+	}
+	.highlight-brown {
+		color: rgba(159, 107, 83, 1);
+		fill: rgba(159, 107, 83, 1);
+	}
+	.highlight-orange {
+		color: rgba(217, 115, 13, 1);
+		fill: rgba(217, 115, 13, 1);
+	}
+	.highlight-yellow {
+		color: rgba(203, 145, 47, 1);
+		fill: rgba(203, 145, 47, 1);
+	}
+	.highlight-teal {
+		color: rgba(68, 131, 97, 1);
+		fill: rgba(68, 131, 97, 1);
+	}
+	.highlight-blue {
+		color: rgba(51, 126, 169, 1);
+		fill: rgba(51, 126, 169, 1);
+	}
+	.highlight-purple {
+		color: rgba(144, 101, 176, 1);
+		fill: rgba(144, 101, 176, 1);
+	}
+	.highlight-pink {
+		color: rgba(193, 76, 138, 1);
+		fill: rgba(193, 76, 138, 1);
+	}
+	.highlight-red {
+		color: rgba(212, 76, 71, 1);
+		fill: rgba(212, 76, 71, 1);
+	}
+	.highlight-default_background {
+		color: rgba(55, 53, 47, 1);
+	}
+	.highlight-gray_background {
+		background: rgba(241, 241, 239, 1);
+	}
+	.highlight-brown_background {
+		background: rgba(244, 238, 238, 1);
+	}
+	.highlight-orange_background {
+		background: rgba(251, 236, 221, 1);
+	}
+	.highlight-yellow_background {
+		background: rgba(251, 243, 219, 1);
+	}
+	.highlight-teal_background {
+		background: rgba(237, 243, 236, 1);
+	}
+	.highlight-blue_background {
+		background: rgba(231, 243, 248, 1);
+	}
+	.highlight-purple_background {
+		background: rgba(244, 240, 247, 0.8);
+	}
+	.highlight-pink_background {
+		background: rgba(249, 238, 243, 0.8);
+	}
+	.highlight-red_background {
+		background: rgba(253, 235, 236, 1);
+	}
+	.block-color-default {
+		color: inherit;
+		fill: inherit;
+	}
+	.block-color-gray {
+		color: rgba(120, 119, 116, 1);
+		fill: rgba(120, 119, 116, 1);
+	}
+	.block-color-brown {
+		color: rgba(159, 107, 83, 1);
+		fill: rgba(159, 107, 83, 1);
+	}
+	.block-color-orange {
+		color: rgba(217, 115, 13, 1);
+		fill: rgba(217, 115, 13, 1);
+	}
+	.block-color-yellow {
+		color: rgba(203, 145, 47, 1);
+		fill: rgba(203, 145, 47, 1);
+	}
+	.block-color-teal {
+		color: rgba(68, 131, 97, 1);
+		fill: rgba(68, 131, 97, 1);
+	}
+	.block-color-blue {
+		color: rgba(51, 126, 169, 1);
+		fill: rgba(51, 126, 169, 1);
+	}
+	.block-color-purple {
+		color: rgba(144, 101, 176, 1);
+		fill: rgba(144, 101, 176, 1);
+	}
+	.block-color-pink {
+		color: rgba(193, 76, 138, 1);
+		fill: rgba(193, 76, 138, 1);
+	}
+	.block-color-red {
+		color: rgba(212, 76, 71, 1);
+		fill: rgba(212, 76, 71, 1);
+	}
+	.block-color-default_background {
+		color: inherit;
+		fill: inherit;
+	}
+	.block-color-gray_background {
+		background: rgba(241, 241, 239, 1);
+	}
+	.block-color-brown_background {
+		background: rgba(244, 238, 238, 1);
+	}
+	.block-color-orange_background {
+		background: rgba(251, 236, 221, 1);
+	}
+	.block-color-yellow_background {
+		background: rgba(251, 243, 219, 1);
+	}
+	.block-color-teal_background {
+		background: rgba(237, 243, 236, 1);
+	}
+	.block-color-blue_background {
+		background: rgba(231, 243, 248, 1);
+	}
+	.block-color-purple_background {
+		background: rgba(244, 240, 247, 0.8);
+	}
+	.block-color-pink_background {
+		background: rgba(249, 238, 243, 0.8);
+	}
+	.block-color-red_background {
+		background: rgba(253, 235, 236, 1);
+	}
+	.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+	.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+	.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+	.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+	.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+	.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+	.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+	.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+	.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+	.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+	.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+	.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+	.select-value-color-pageGlass { background-color: undefined; }
+	.select-value-color-washGlass { background-color: undefined; }
+	
+	.checkbox {
+		display: inline-flex;
+		vertical-align: text-bottom;
+		width: 16;
+		height: 16;
+		background-size: 16px;
+		margin-left: 2px;
+		margin-right: 5px;
+	}
+	
+	.checkbox-on {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+	}
+	
+	.checkbox-off {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+	}
+		
+	</style></head><body style="background-color: #121212; color: white;"><article id="15eb8742-566a-804e-9695-fd089cd7f2e2" class="page sans"><article id="15eb8742-566a-80a9-802c-d303fa5b74b3" class="page sans"><header><img class="page-cover-image" src="https://i.ytimg.com/vi/bSOu3D7yQf0/maxresdefault.jpg" style="object-position:center 78.99000000000001%"><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://img.appledb.dev/device@preview/AppleTV6,2/0.webp"></div><h1 class="page-title">Apple TV [Lost Media]</h1><p class="page-description"></p></header><div class="page-body"><p id="15eb8742-566a-8038-a398-ca1fb1b7b328" class=""><strong>If you have an Apple TV with this game installed, please contact us with the contact info linked in the Credits page.</strong></p><p id="15eb8742-566a-80c3-b8cd-fac44cb2c367" class="">This version of the game is lost media, meaning that the files for this version of the game are not publicly available. Ripping apps from this device in .ipa or .tipa format is very difficult. The process of ripping apps requires a&nbsp;<a href="https://ios.cfw.guide/get-started/select-apple-tv/">jailbreak</a>&nbsp;or Trollstore and I find it straight up impossible that anyone will ever dump this version of the game unless there's some crazy streak of luck. The new Apple TVs don't even have usb ports, or can run 32-bit apps, so just forget about those entirely. To play .tipa files on Apple TV means that you need to either&nbsp;<a href="https://www.reddit.com/r/jailbreak/comments/bu8otl/tutorial_how_to_sideloadjailbreak_apple_tv_4k_no/">sideload&nbsp;</a>or install&nbsp;<a href="https://github.com/straight-tamago/TrollStore-tvOS">Trollstore&nbsp;</a>on the thing, and to run MCSM you need an Apple TV on TVOS 10.2.2 or lower. Sideloading is something I almost never recommend. The apps only stay there for 7 days before being removed and you need to suffer through the process again. You also need a Macbook. The Reddit thread linked has mixed results and is so painful to go through, it's not nearly worth the trouble. To install Trollstore on Apple TV means that you need firmwares between 14.0 - 16.6.1, 16.7 RC (20H18) or 17.0. If you don't have these firmwares, you can still jailbreak all Apple TVs with the exception of Apple TV 4K models on TVOS 17.6.1 and above.</p><p id="15eb8742-566a-8097-81f5-dd94edc694a1" class="">
+	</p><p id="15eb8742-566a-80b4-92f4-c907883b2807" class=""><em>edit from toastito: just follow </em><em><a href="https://www.reddit.com/r/jailbreak/comments/1b861ii/tutorial_how_to_correctly_install_trollstore_on/">this lovely reddit post</a></em><em> to install trollstore on your apple tv and use </em><em><a href="https://github.com/straight-tamago/TrollDecrypt-tvOS">this lovely app</a></em><em> to decrypt the ipa if you somehow still have a apple tv that can install trollstore and has mcsm installed</em></p><p id="15eb8742-566a-8086-ba9a-cfc7ef36ce2b" class="">
+	</p><p id="15eb8742-566a-8055-b6ef-c22c0c67b3e0" class="">Even though no one will realistically play it, ripping the game would still help a lot in archiving this game's history. While we're here, it might be worth talking about FireTV as well. There was a FireTV release, although FireTV OS is just based off FireOS, which is based off Android, so you'd be fine installing the Android apk and hooking up a controller.</p><p id="15eb8742-566a-80d0-990b-c6daa9443017" class="">Also, for some reason the game will get stuck at the title screen if you're logged into iCloud.</p><p id="15eb8742-566a-8069-bfff-d492dcfede98" class="">Here is all current media known that's connected to this version</p><p id="15eb8742-566a-80d1-ad9b-eb19d7a52e8f" class=""><a href="https://www.youtube.com/watch?v=Xo4emNpAKaU">https://www.youtube.com/watch?v=Xo4emNpAKaU</a>&nbsp;- Episode 1 Part 1</p><p id="15eb8742-566a-8091-ace5-eb604e93cf07" class=""><a href="https://www.youtube.com/watch?v=mhMXwsTtZNI">https://www.youtube.com/watch?v=mhMXwsTtZNI</a>&nbsp;- Episode 1 Part 2</p><p id="15eb8742-566a-808d-ba7a-d222657e8662" class=""><a href="https://www.youtube.com/watch?v=zp1VenVE-oo">https://www.youtube.com/watch?v=zp1VenVE-oo</a>&nbsp;- Episode 1 Part 3</p><p id="15eb8742-566a-8064-a580-ef7345278f15" class=""><a href="https://www.youtube.com/watch?v=AbEfx_K9stA">https://www.youtube.com/watch?v=AbEfx_K9stA</a>&nbsp;- Episode 1 Part 4 (Final Segment)</p><p id="15eb8742-566a-800d-83cb-cc7b6f302f33" class=""><a href="https://www.youtube.com/watch?v=pCaBfcvfzmw">https://www.youtube.com/watch?v=pCaBfcvfzmw</a>&nbsp;- Episode 2 Part 1</p><p id="15eb8742-566a-80b4-b4c4-eaf6d8fe717c" class=""><a href="https://www.youtube.com/watch?v=PjSjrncmBf0">https://www.youtube.com/watch?v=PjSjrncmBf0</a>&nbsp;- Episode 2 Part 2</p><p id="15eb8742-566a-80bc-a258-c42ea917251b" class=""><a href="https://www.youtube.com/watch?v=c-BGGUZmIQ0">https://www.youtube.com/watch?v=c-BGGUZmIQ0</a>&nbsp;- Episode 2 Part 3 (Final Segment)</p><p id="15eb8742-566a-80f0-a7aa-e2ce5c9841d8" class=""><a href="https://www.youtube.com/watch?v=CPdF_BqKm-0">https://www.youtube.com/watch?v=CPdF_BqKm-0</a>&nbsp;- Episode 3 Part 1</p><p id="15eb8742-566a-80db-854d-f2a02a1eef50" class=""><a href="https://www.youtube.com/watch?v=fhIYU97j2vk">https://www.youtube.com/watch?v=fhIYU97j2vk</a>&nbsp;- Episode 3 Part 2</p><p id="15eb8742-566a-80e4-b8f5-da9ebc5bbed6" class=""><a href="https://www.youtube.com/watch?v=IyG1ICPMA6I">https://www.youtube.com/watch?v=IyG1ICPMA6I</a>&nbsp;- Episode 3 Part 3 (Final Segment)</p><p id="15eb8742-566a-809b-bcfe-f03e16e8695b" class=""><a href="https://www.youtube.com/watch?v=WolunBrN2R8">https://www.youtube.com/watch?v=WolunBrN2R8</a>&nbsp;- Episode 4 Part 1</p><p id="15eb8742-566a-80b2-bda6-e0b7c8ff41e0" class=""><a href="https://www.youtube.com/watch?v=GmNREb8Hu4U">https://www.youtube.com/watch?v=GmNREb8Hu4U</a>&nbsp;- Episode 4 Part 2</p><p id="15eb8742-566a-80df-9db8-eb05dcaf5111" class=""><a href="https://www.youtube.com/watch?v=udIJq-Ooexo">https://www.youtube.com/watch?v=udIJq-Ooexo</a>&nbsp;- Episode 4 Part 3</p><p id="15eb8742-566a-8018-90b1-f1e2e41ce726" class=""><a href="https://www.youtube.com/watch?v=vB0rfjgTCTg">https://www.youtube.com/watch?v=vB0rfjgTCTg</a>&nbsp;- Episode 4 Part 4 (Final Segment)</p><p id="15eb8742-566a-8094-b9d3-e34aacf15b18" class=""><a href="https://www.youtube.com/watch?v=xWXXP-RD6Ds">https://www.youtube.com/watch?v=xWXXP-RD6Ds</a>&nbsp;- Episode 5 Part 1</p><p id="15eb8742-566a-80a0-926b-c5ab123ae6b4" class=""><a href="https://www.youtube.com/watch?v=vGNS5AWdr90">https://www.youtube.com/watch?v=vGNS5AWdr90</a>&nbsp;- Episode 5 Part 2</p><p id="15eb8742-566a-80db-94c5-dc6fdbc891f6" class=""><a href="https://www.youtube.com/watch?v=s2r_QaqwSm4">https://www.youtube.com/watch?v=s2r_QaqwSm4</a>&nbsp;- Episode 5 Part 3</p><p id="15eb8742-566a-80e5-9e16-c3eac841660b" class=""><a href="https://www.youtube.com/watch?v=QtHEJ2xe0A8">https://www.youtube.com/watch?v=QtHEJ2xe0A8</a>&nbsp;- Episode 5 Part 4 (Final Segment)</p><p id="15eb8742-566a-80cf-8f71-f5c00d31d5ee" class="">Below: A screenshot of the Apple Store page for the game.</p><p id="15eb8742-566a-800a-ac5f-fe6680253c9a" class="">
+	</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></article></body></html>
